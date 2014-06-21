@@ -1,0 +1,120 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "padding": 15,
+        "designer|userClassName": "Introduction",
+        "layout": "vbox"
+    },
+    "designerId": "8b7bf508-05d2-4847-a183-0eaded746d43",
+    "cn": [
+        {
+            "type": "Ext.carousel.Carousel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "padding": null
+            },
+            "designerId": "61ca5f02-99f7-4a76-a793-42b9d376ac58",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Intro duction to",
+                        "margin": null,
+                        "style": "font-size: 4em;"
+                    },
+                    "designerId": "0fe683af-4962-4033-87d9-799c75c91587"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Family Penny",
+                        "style": "font-size: 4em;"
+                    },
+                    "designerId": "fd609957-7176-43b5-9d6a-98b8e1420496"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "goes here ?",
+                        "style": null
+                    },
+                    "designerId": "e8b52dbd-9a8f-4f5b-b1f1-0a7d0f386d80",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "addAccount",
+                                "text": "Add Account"
+                            },
+                            "designerId": "2e65ae32-6f00-4dd2-a1bb-5a63647558e0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 60,
+                "padding": 15
+            },
+            "designerId": "854497b0-621a-4463-a357-04bf4df82be0",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 1,
+                        "itemId": "skipIntro",
+                        "style": "border: 1px solid #000;",
+                        "ui": "plain",
+                        "iconAlign": "right",
+                        "iconCls": null,
+                        "text": "Skip"
+                    },
+                    "designerId": "4877d39f-606a-48bf-b495-79cbc5ebb7c6"
+                }
+            ]
+        }
+    ]
+}

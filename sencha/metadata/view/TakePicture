@@ -1,0 +1,78 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TakePicture",
+        "designer|userAlias": "takepicture",
+        "layout": "vbox"
+    },
+    "designerId": "a38d75ab-c170-44b5-99b8-5c43089d5c34",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<h1>Step 1:</h1>",
+                "padding": "10px",
+                "style": "font-size: 2em;"
+            },
+            "designerId": "f6163db4-d4b7-4c11-92e0-d9098af2090e"
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<p>Take a picture of the violation.</p>",
+                "padding": "10px"
+            },
+            "designerId": "1d767f15-3305-4ef4-8432-8555ab0088bc"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "center",
+                "container|pack": "center",
+                "height": null,
+                "layout": "vbox"
+            },
+            "designerId": "f7f12dad-1eab-447d-9fa5-ba8189106187",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 150,
+                        "itemId": "launchCameraButton",
+                        "style": "border-radius: 100px;",
+                        "ui": "confirm",
+                        "width": 150,
+                        "text": "Camera"
+                    },
+                    "designerId": "1d60902c-ddee-4fef-a0d2-0ec4b963953a"
+                }
+            ]
+        }
+    ]
+}

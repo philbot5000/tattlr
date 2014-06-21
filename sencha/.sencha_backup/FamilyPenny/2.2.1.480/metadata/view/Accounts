@@ -1,0 +1,37 @@
+{
+    "type": "Ext.dataview.DataView",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "accounts",
+        "padding": 10,
+        "designer|userClassName": "Accounts",
+        "designer|userAlias": "accounts1",
+        "store": "accounts"
+    },
+    "designerId": "0bcf733f-9ece-4e16-851a-d6643b91153e",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div class=\"account\">",
+                    "    <img src=\"images/user.png\" class=\"user-image\" />",
+                    "    <span class=\"account-name\">{name}</span><br />",
+                    "    <span>Accounts: {accounts}</span>",
+                    "</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "dbcf73fe-69f3-436c-84ce-e14879014b8d"
+        }
+    ]
+}

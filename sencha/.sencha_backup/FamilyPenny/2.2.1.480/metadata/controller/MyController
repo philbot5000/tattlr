@@ -1,0 +1,109 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "designerId": "abf23ca3-f10e-4d44-be75-af05a17ff996",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainInitialize",
+                "implHandler": [
+                    "var main = component.getDraggable(),",
+                    "    me = this;",
+                    "",
+                    "component.element.addCls('main-inner');",
+                    "component.isOpen = false;",
+                    "",
+                    "main.on('dragstart', function(draggable, event) {",
+                    "    component.element.removeCls('main-inner');",
+                    "    if(!component.isOpen) {",
+                    "",
+                    "        me.showMenuButtons();",
+                    "    }",
+                    "});",
+                    "",
+                    "main.on('dragend', function(draggable) {",
+                    "",
+                    "    if(component.isOpen === false && draggable.offset.x > 50) {",
+                    "        draggable.setOffset(100, 0, {",
+                    "            type: 'slide',",
+                    "            duration: 100",
+                    "        });",
+                    "",
+                    "        component.isOpen = true;",
+                    "",
+                    "    } else {",
+                    "",
+                    "        draggable.setOffset(0, 0, {",
+                    "            type: 'slide',",
+                    "            duration: 100",
+                    "        });",
+                    "",
+                    "        component.isOpen = false;",
+                    "        me.hideMenuButtons();",
+                    "",
+                    "    }",
+                    "",
+                    "    component.element.addCls('main-inner');",
+                    "});"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.Container",
+                "designer|controlQuery": "container#main"
+            },
+            "designerId": "fa3ca980-399b-4880-b6ab-5fbee408d1d2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showMenuButtons",
+                "implHandler": [
+                    "var menu = Ext.ComponentQuery.query('#menu')[0],",
+                    "    buttons = menu.query('button');",
+                    "",
+                    "for(var i = 0; i < buttons.length; i++) {",
+                    "    buttons[i].show();",
+                    "}"
+                ]
+            },
+            "designerId": "2548640b-3a3f-41ba-b193-baf60cd7ef0d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "hideMenuButtons",
+                "implHandler": [
+                    "var menu = Ext.ComponentQuery.query('#menu')[0],",
+                    "    buttons = menu.query('button');",
+                    "",
+                    "for(var i = 0; i < buttons.length; i++) {",
+                    "    buttons[i].hide();",
+                    "}"
+                ]
+            },
+            "designerId": "4e003ef3-371c-410f-9995-8d9dd5728d49"
+        }
+    ]
+}

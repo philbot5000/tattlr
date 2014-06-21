@@ -1,0 +1,119 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Login"
+    },
+    "designerId": "adf61528-1da7-40b7-90a2-aeefd3a7e517",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLoginTap",
+                "implHandler": [
+                    "Ext.ComponentQuery.query('#login')[0].setMasked({xtype:'loadmask', message: 'Signing In...'});",
+                    "",
+                    "",
+                    "Parse.User.logIn(Ext.ComponentQuery.query('#username')[0].getValue(), Ext.ComponentQuery.query('#password')[0].getValue(), {",
+                    "    success: function(user) {",
+                    "",
+                    "        // Do stuff after successful login.",
+                    "        //FP.config.Runtime.setCurrentUserId(user.id);",
+                    "        var headers = {",
+                    "            \"X-Parse-Application-Id\": \"a2pPfe7u8rb4NUO9lqFGN606n7hvDltjw3Co0m5s\",",
+                    "            \"X-Parse-REST-API-Key\": \"SrvankvAXg4vRYv4hmgSJAdiIZJV1WFUVikSj95J\",",
+                    "            \"X-Parse-Session-Token\": Parse.User.current()._sessionToken,",
+                    "            \"Content-Type\": \"application/json\"",
+                    "        };",
+                    "",
+                    "        Ext.getStore('Accounts_Rest').getProxy().setHeaders(headers);",
+                    "        Ext.getStore('UserAccounts_Rest').getProxy().setHeaders(headers);",
+                    "        Ext.getStore('Transactions').getProxy().setHeaders(headers);",
+                    "",
+                    "        Ext.ComponentQuery.query('#toolbar')[0].show();",
+                    "        Ext.ComponentQuery.query('#login')[0].setMasked(false);",
+                    "        FP.app.redirectTo('accounts');",
+                    "",
+                    "    },",
+                    "    error: function(user, error) {",
+                    "",
+                    "        // The login failed. Check error to see why.",
+                    "        Ext.ComponentQuery.query('#login')[0].setMasked(false);",
+                    "",
+                    "        // check to see if we're in Phonegap...",
+                    "        if(typeof navigator.alert !== 'undefined') {",
+                    "            navigator.notification.alert(error.message, function() {}, error.code, 'OK');",
+                    "        } else {",
+                    "            alert(\"Error: \" + error.code + \" \" + error.message);",
+                    "        }",
+                    "    }",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button#login"
+            },
+            "designerId": "941a39e9-1ebf-4cf0-951d-d95a7695589f"
+        },
+        {
+            "type": "Ext.app.Route",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "login",
+                "fn": "showLogin",
+                "implHandler": [
+                    "var main = Ext.getCmp('main'),",
+                    "    login = Ext.create('FP.view.Login');",
+                    "",
+                    "/*",
+                    "main.query('#addUser')[0].show();",
+                    "main.query('#toolbar')[0].setTitle('Users');",
+                    "main.query('#menuButton')[0].show();",
+                    "main.query('#back')[0].hide();",
+                    "main.query('#editUser')[0].hide();",
+                    "main.query('#accountMenu')[0].hide();",
+                    "",
+                    "*/",
+                    "main.setActiveItem(login);"
+                ]
+            },
+            "designerId": "dbe90ae6-e4c6-4b91-ac21-6de3c1e1901d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onResetPasswordShow",
+                "implHandler": [
+                    "var resetEmail = Ext.ComponentQuery.query('#username')[0].getValue();",
+                    "",
+                    "if(resetEmail !== '') {",
+                    "    Ext.ComponentQuery.query('#usernameReset')[0].setValue(resetEmail);",
+                    "    Ext.ComponentQuery.query('#resetPassword')[0].setUi('confirm');",
+                    "}"
+                ],
+                "name": "show",
+                "designer|targetType": "Ext.form.FieldSet",
+                "designer|controlQuery": "fieldset#resetPassword"
+            },
+            "designerId": "f47e1d44-ae48-43b6-baa1-394a2bb0b556"
+        }
+    ]
+}

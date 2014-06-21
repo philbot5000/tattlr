@@ -1,0 +1,135 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "signUp",
+        "designer|userClassName": "SignUp"
+    },
+    "designerId": "b4b958fa-38be-4f92-bbc9-1ddf1c9ee436",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Sign Up"
+            },
+            "designerId": "1b3ea0da-bdf6-40df-b841-361a009df674",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "label": "",
+                        "name": "firstName",
+                        "placeHolder": "First Name"
+                    },
+                    "designerId": "13c64b70-692b-46c3-aa8d-ce62654251a4"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "label": "",
+                        "name": "lastName",
+                        "placeHolder": "Last Name"
+                    },
+                    "designerId": "d6bdfb54-f799-4a02-b8fe-2c985a25b535"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "email",
+                        "label": "",
+                        "name": "email",
+                        "placeHolder": "Email"
+                    },
+                    "designerId": "192f0b6a-a8ff-4566-b96c-6574efa8db97"
+                },
+                {
+                    "type": "Ext.field.Password",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "password",
+                        "label": "",
+                        "name": "password",
+                        "placeHolder": "Password"
+                    },
+                    "designerId": "51ad5957-9b18-45f7-bf7b-849b05693ede"
+                },
+                {
+                    "type": "Ext.field.Password",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": false,
+                        "itemId": "confirm",
+                        "label": "",
+                        "name": "confirm",
+                        "placeHolder": "Confirm"
+                    },
+                    "designerId": "0369b631-64fc-403c-b7e5-5f5675b2bbe2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "Family Penny terms of use.",
+                "padding": "0 15 0 15",
+                "style": "font-size: 0.8em;"
+            },
+            "designerId": "abfd7621-c1dd-4ad4-a791-7c92bd82b60b",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "submit",
+                        "ui": "action",
+                        "text": "Submit"
+                    },
+                    "designerId": "25df6ec9-dc87-4eca-b8a6-12c0dc2a57c4"
+                }
+            ]
+        }
+    ]
+}

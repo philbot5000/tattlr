@@ -1,0 +1,374 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "slide",
+        "cls": [
+            "main"
+        ],
+        "draggable": null,
+        "id": "main",
+        "itemId": "main",
+        "style": "background: #fff;",
+        "width": "100%",
+        "zIndex": 1,
+        "designer|userClassName": "Main",
+        "designer|initialView": true,
+        "layout": "card"
+    },
+    "designerId": "f1a1586c-3cea-4b10-9753-4681f535fbc6",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": null,
+                "itemId": "toolbar",
+                "showAnimation": [
+                    "{type: 'slideIn', direction: 'down'}"
+                ],
+                "title": "tattlr"
+            },
+            "configAlternates": {
+                "showAnimation": "object"
+            },
+            "designerId": "6da7a90e-bc67-4c70-88af-78072c9cfec7",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "green"
+                        ],
+                        "hidden": true,
+                        "itemId": "menuButton",
+                        "showAnimation": [
+                            "{type: 'slide', direction: 'right'}"
+                        ],
+                        "style": "color: #fff;",
+                        "ui": "plain",
+                        "iconCls": "list",
+                        "text": ""
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "eab57572-dc88-4c84-a1c7-53725575f7f5"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "hideAnimation": null,
+                        "itemId": "back",
+                        "margin": "0 0 0 0",
+                        "padding": "0 0 0 0",
+                        "showAnimation": [
+                            "{type: 'slide', direction: 'right'}"
+                        ],
+                        "ui": "plain",
+                        "width": 50,
+                        "iconCls": "back",
+                        "text": null
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "84fa1076-b222-4a78-9c0c-e4ef2a85e015"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "5f0bcf64-769d-4b9b-af8a-e4924be9932a"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "itemId": "editUser",
+                        "ui": "plain",
+                        "text": "Edit"
+                    },
+                    "designerId": "51a412d1-5786-44ec-a2db-fd8a7ca2d952"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menuButton"
+                        ],
+                        "docked": null,
+                        "hidden": true,
+                        "itemId": "addUser",
+                        "showAnimation": [
+                            "{type: 'slide', direction: 'left'}"
+                        ],
+                        "ui": "plain",
+                        "iconCls": "addUser",
+                        "text": null
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "2732927b-3005-4610-992a-475af4edec6c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "border": null,
+                "bottom": 0,
+                "cls": [
+                    "account-menu"
+                ],
+                "docked": "top",
+                "height": 60,
+                "hidden": true,
+                "hideAnimation": [
+                    "{type: 'slideOut', direction: 'down'}"
+                ],
+                "itemId": "accountMenu",
+                "showAnimation": [
+                    "{type: 'slide', direction: 'up'}"
+                ],
+                "style": null,
+                "width": "100%",
+                "layout": "hbox"
+            },
+            "configAlternates": {
+                "showAnimation": "object",
+                "hideAnimation": "object"
+            },
+            "designerId": "d252379b-e8f4-4abc-973a-2c8a2c91594f",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 60,
+                        "itemId": "addUserAccount",
+                        "ui": "plain",
+                        "width": null,
+                        "iconAlign": "top",
+                        "iconCls": "add",
+                        "text": "<span class=\"user-account-menu\">Account</span>"
+                    },
+                    "designerId": "714211ec-343c-4067-bd23-3f3bae68ef7e"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 60,
+                        "hidden": true,
+                        "itemId": "oneTimeTransaction",
+                        "ui": "plain",
+                        "width": 100,
+                        "iconAlign": "top",
+                        "iconCls": "compose",
+                        "text": "<span class=\"user-account-menu\">One Time</span>"
+                    },
+                    "designerId": "0f5c0b8a-33cb-49ff-b9b1-3362f4ece153"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 60,
+                        "itemId": "withdraw",
+                        "style": "color: #F25050;",
+                        "ui": "plain",
+                        "width": null,
+                        "iconAlign": "top",
+                        "iconCls": "compose",
+                        "text": "<span class=\"user-account-menu\">Withdraw</span>"
+                    },
+                    "designerId": "f0cbf40f-6c01-48ec-98b8-662ef0c5d479"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 60,
+                        "itemId": "deposit",
+                        "style": "color: #65CE41;",
+                        "ui": "plain",
+                        "width": null,
+                        "iconAlign": "top",
+                        "iconCls": "compose",
+                        "text": "<span class=\"user-account-menu\">Deposit</span>"
+                    },
+                    "designerId": "2081a7a0-3a77-4fa8-afa0-930cf5ba12a8"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "start",
+                "bottom": 60,
+                "cls": [
+                    "account-menu"
+                ],
+                "height": 40,
+                "hidden": true,
+                "hideAnimation": [
+                    "{type: 'slideOut', direction: 'down'}"
+                ],
+                "itemId": "accountInfo",
+                "showAnimation": [
+                    "{type: 'slide', direction: 'up'}"
+                ],
+                "width": "100%",
+                "layout": "hbox"
+            },
+            "configAlternates": {
+                "showAnimation": "object",
+                "hideAnimation": "object"
+            },
+            "designerId": "d443a423-4363-432b-9b77-cad030b59dfc",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "height": 40,
+                        "hidden": false,
+                        "html": null,
+                        "itemId": "balanceDisplay",
+                        "padding": 10,
+                        "showAnimation": "fade",
+                        "style": "font-size: 0.8em;"
+                    },
+                    "designerId": "f7bc452c-8614-4bf7-9994-6cc8fa0a9592"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "accountName",
+                        "padding": 10,
+                        "style": null
+                    },
+                    "designerId": "74e9a98d-716a-41da-89d8-a7444da28656"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainActiveItemChange",
+                "implHandler": [
+                    "if(oldValue !== 0) {",
+                    "",
+                    "    //console.log(container.getActiveItem().getItemId());",
+                    "    //oldValue.destroy();",
+                    "    //container.remove(oldValue, false);",
+                    "}"
+                ],
+                "name": "activeitemchange"
+            },
+            "designerId": "16b2fb25-cd1b-47ec-89eb-16a9b9b72c57"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainInitialize",
+                "implHandler": [
+                    "",
+                    "if(localStorage.getItem('tattlrToken') !== null) {",
+                    "    var violationForm = Ext.create('Tattlr.view.ViolationForm');",
+                    "    component.setActiveItem(violationForm);",
+                    "    console.log('token found');",
+                    "} else {",
+                    "    ",
+                    "    var start = Ext.create('Tattlr.view.Start');",
+                    "    component.setActiveItem(start);",
+                    "}"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "af8fa3ee-057d-48b1-84c1-64326127c5e0"
+        }
+    ]
+}

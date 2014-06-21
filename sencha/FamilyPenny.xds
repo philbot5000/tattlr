@@ -1,0 +1,146 @@
+{
+    "name": "FamilyPenny",
+    "settings": {},
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch23",
+    "topInstanceFileMap": {
+        "ef81f198-22e8-4497-a975-1a39b69f8bca": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "4cfa1c9e-4e7e-4bae-a130-6088f60869fc": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "abf23ca3-f10e-4d44-be75-af05a17ff996": {
+            "paths": [
+                "metadata/controller/Master",
+                "app/controller/override/Master.js",
+                "app/controller/Master.js"
+            ],
+            "className": "Master"
+        },
+        "6e5fdf82-ac83-4fd8-b13d-5c0589fa2bd3": {
+            "paths": [
+                "metadata/view/Start",
+                "app/view/override/Start.js",
+                "app/view/Start.js"
+            ],
+            "className": "Start"
+        },
+        "b4b958fa-38be-4f92-bbc9-1ddf1c9ee436": {
+            "paths": [
+                "metadata/view/SignUp",
+                "app/view/override/SignUp.js",
+                "app/view/SignUp.js"
+            ],
+            "className": "SignUp"
+        },
+        "1b7acb04-24d3-43c7-8741-8b51f32d59c7": {
+            "paths": [
+                "metadata/controller/Start",
+                "app/controller/override/Start.js",
+                "app/controller/Start.js"
+            ],
+            "className": "Start"
+        },
+        "23c10151-fb31-4b1c-8bc4-733a582b5c96": {
+            "paths": [
+                "metadata/controller/SignUp",
+                "app/controller/override/SignUp.js",
+                "app/controller/SignUp.js"
+            ],
+            "className": "SignUp"
+        },
+        "adf61528-1da7-40b7-90a2-aeefd3a7e517": {
+            "paths": [
+                "metadata/controller/Login",
+                "app/controller/override/Login.js",
+                "app/controller/Login.js"
+            ],
+            "className": "Login"
+        },
+        "8b7bf508-05d2-4847-a183-0eaded746d43": {
+            "paths": [
+                "metadata/view/Introduction",
+                "app/view/override/Introduction.js",
+                "app/view/Introduction.js"
+            ],
+            "className": "Introduction"
+        },
+        "a38d75ab-c170-44b5-99b8-5c43089d5c34": {
+            "paths": [
+                "metadata/view/TakePicture",
+                "app/view/override/TakePicture.js",
+                "app/view/TakePicture.js"
+            ],
+            "className": "TakePicture"
+        },
+        "f1a1586c-3cea-4b10-9753-4681f535fbc6": {
+            "paths": [
+                "metadata/view/Main",
+                "app/view/override/Main.js",
+                "app/view/Main.js"
+            ],
+            "className": "Main"
+        },
+        "342c0455-5b90-42a6-a979-e747b7f19003": {
+            "paths": [
+                "metadata/controller/TakePicture",
+                "app/controller/override/TakePicture.js",
+                "app/controller/TakePicture.js"
+            ],
+            "className": "TakePicture"
+        },
+        "370aeb43-e0ea-431d-95d4-559d2ac9fc06": {
+            "paths": [
+                "metadata/view/ViolationForm",
+                "app/view/override/ViolationForm.js",
+                "app/view/ViolationForm.js"
+            ],
+            "className": "ViolationForm"
+        },
+        "1a7e6262-902d-4dce-854f-73d05eae5ae6": {
+            "paths": [
+                "metadata/view/CapturePicture",
+                "app/view/override/CapturePicture.js",
+                "app/view/CapturePicture.js"
+            ],
+            "className": "CapturePicture"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "6e5fdf82-ac83-4fd8-b13d-5c0589fa2bd3",
+            "f1a1586c-3cea-4b10-9753-4681f535fbc6",
+            "a38d75ab-c170-44b5-99b8-5c43089d5c34",
+            "b4b958fa-38be-4f92-bbc9-1ddf1c9ee436",
+            "8b7bf508-05d2-4847-a183-0eaded746d43",
+            "370aeb43-e0ea-431d-95d4-559d2ac9fc06",
+            "1a7e6262-902d-4dce-854f-73d05eae5ae6"
+        ],
+        "store": [],
+        "controller": [
+            "abf23ca3-f10e-4d44-be75-af05a17ff996",
+            "1b7acb04-24d3-43c7-8741-8b51f32d59c7",
+            "23c10151-fb31-4b1c-8bc4-733a582b5c96",
+            "adf61528-1da7-40b7-90a2-aeefd3a7e517",
+            "342c0455-5b90-42a6-a979-e747b7f19003"
+        ],
+        "model": [],
+        "resource": [
+            "ef81f198-22e8-4497-a975-1a39b69f8bca",
+            "4cfa1c9e-4e7e-4bae-a130-6088f60869fc"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

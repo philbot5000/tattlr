@@ -1,0 +1,122 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Master"
+    },
+    "designerId": "abf23ca3-f10e-4d44-be75-af05a17ff996",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainInitialize",
+                "implHandler": [
+                    "",
+                    "/* View's Drag Set Up ",
+                    "var main = component.getDraggable(),",
+                    "me = this;",
+                    "",
+                    "component.element.addCls('main-inner');",
+                    "component.isOpen = false;",
+                    "",
+                    "main.on('drag', function(draggable, event, offsetX) {",
+                    "//me.fadeButtons(offsetX / 100);",
+                    "});",
+                    "",
+                    "main.on('dragstart', function(draggable, event) {",
+                    "component.element.removeCls('main-inner');",
+                    "if(!component.isOpen) {",
+                    "",
+                    "    //me.showMenuButtons();",
+                    "}",
+                    "});",
+                    "",
+                    "main.on('dragend', function(draggable) {",
+                    "",
+                    "if(component.isOpen === false && draggable.offset.x > 50) {",
+                    "    draggable.setOffset(100, 0, {",
+                    "        type: 'slide',",
+                    "        duration: 100",
+                    "    });",
+                    "",
+                    "    component.isOpen = true;",
+                    "",
+                    "} else {",
+                    "",
+                    "    draggable.setOffset(0, 0, {",
+                    "        type: 'slide',",
+                    "        duration: 100",
+                    "    });",
+                    "",
+                    "    component.isOpen = false;",
+                    "    //me.hideMenuButtons();",
+                    "",
+                    "}",
+                    "",
+                    "component.element.addCls('main-inner');",
+                    "});",
+                    "",
+                    "",
+                    "*/",
+                    "this.checkUser();"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.Container",
+                "designer|controlQuery": "container#main"
+            },
+            "designerId": "fa3ca980-399b-4880-b6ab-5fbee408d1d2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "checkUser",
+                "implHandler": [
+                    "/* Called on Initialize of Main Container in Master Controller */",
+                    "",
+                    "/*",
+                    "var currentUser = Parse.User.current();",
+                    "",
+                    "if (currentUser) {",
+                    "    // We have current user so set headers in Rest Proxy to access Parse",
+                    "    // ",
+                    "    var headers = {",
+                    "        \"X-Parse-Application-Id\": \"a2pPfe7u8rb4NUO9lqFGN606n7hvDltjw3Co0m5s\",",
+                    "        \"X-Parse-REST-API-Key\": \"SrvankvAXg4vRYv4hmgSJAdiIZJV1WFUVikSj95J\",",
+                    "        \"X-Parse-Session-Token\": Parse.User.current()._sessionToken,",
+                    "        \"Content-Type\": \"application/json\"",
+                    "    };",
+                    "",
+                    "    Ext.getStore('Accounts_Rest').getProxy().setHeaders(headers);",
+                    "    Ext.getStore('UserAccounts_Rest').getProxy().setHeaders(headers);",
+                    "    Ext.getStore('Transactions').getProxy().setHeaders(headers);",
+                    "",
+                    "    FP.app.redirectTo('accounts');",
+                    "",
+                    "} else {",
+                    "    // show the signup or login page",
+                    "",
+                    "    FP.app.redirectTo('start');",
+                    "",
+                    "",
+                    "}",
+                    "*/"
+                ]
+            },
+            "designerId": "96d986d2-6692-45d8-b95d-dde24f0dddc9"
+        }
+    ]
+}

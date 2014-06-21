@@ -1,0 +1,287 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "width": null,
+        "designer|userClassName": "Master",
+        "requires": [
+            "Ext.Toolbar"
+        ],
+        "designer|initialView": true,
+        "layout": "hbox"
+    },
+    "designerId": "8ce4896c-807e-4c71-8695-d71f0ea082e5",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "main"
+                ],
+                "draggable": [
+                    "{",
+                    "    direction: 'horizontal',",
+                    "    constraint: {",
+                    "        min: {",
+                    "            x: 0,",
+                    "            y: 0",
+                    "        },",
+                    "        max: {",
+                    "            x: 100,",
+                    "            y: 0",
+                    "        }",
+                    "    }",
+                    "}"
+                ],
+                "itemId": "main",
+                "style": "background: #fff;",
+                "width": "100%",
+                "zIndex": 1,
+                "layout": "card"
+            },
+            "designerId": "20b89ac3-7bad-41e1-8697-5b3b27cf0d24",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "green",
+                            "toolbar"
+                        ],
+                        "docked": "top",
+                        "itemId": "toolbar",
+                        "title": ""
+                    },
+                    "designerId": "6da7a90e-bc67-4c70-88af-78072c9cfec7",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "green"
+                                ],
+                                "itemId": "menuButton",
+                                "style": "color: #fff;",
+                                "ui": "plain",
+                                "iconCls": "menu",
+                                "text": ""
+                            },
+                            "designerId": "eab57572-dc88-4c84-a1c7-53725575f7f5"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "ui": "plain",
+                                "iconCls": "add",
+                                "text": "User"
+                            },
+                            "designerId": "2732927b-3005-4610-992a-475af4edec6c"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "cb90cb72-b056-4492-9fe7-3de0f75d3192",
+                    "masterInstanceId": "0bcf733f-9ece-4e16-851a-d6643b91153e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "center",
+                "container|pack": "center",
+                "bottom": 0,
+                "cls": [
+                    "menu-bg"
+                ],
+                "docked": "left",
+                "height": null,
+                "itemId": "menu",
+                "left": 0,
+                "margin": null,
+                "top": 0,
+                "width": 100,
+                "zIndex": 0,
+                "layout": "vbox"
+            },
+            "designerId": "9dbd47d9-e9f6-4620-a100-c396191a95d6",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-button"
+                        ],
+                        "height": 50,
+                        "hidden": true,
+                        "margin": "0 0 5 0",
+                        "showAnimation": [
+                            "{type: 'slideIn', direction: 'right'}"
+                        ],
+                        "width": 80,
+                        "iconAlign": "top",
+                        "iconCls": "bookmarks",
+                        "text": "Accounts"
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "da388dc9-440f-4705-a4c2-84452fbdbc41"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-button"
+                        ],
+                        "height": 50,
+                        "hidden": true,
+                        "margin": "0 0 5 0",
+                        "showAnimation": [
+                            "{type: 'slideIn', direction: 'left'}"
+                        ],
+                        "ui": null,
+                        "width": 80,
+                        "iconAlign": "top",
+                        "iconCls": "team",
+                        "text": "Users"
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "d9076945-f47f-4f09-80d2-8f435e14e580"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-button"
+                        ],
+                        "height": 50,
+                        "hidden": true,
+                        "margin": "0 0 5 0",
+                        "showAnimation": [
+                            "{type: 'slideIn', direction: 'right'}"
+                        ],
+                        "ui": null,
+                        "width": 80,
+                        "iconAlign": "top",
+                        "iconCls": "reports",
+                        "text": "Reports"
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "3d0a661d-12ce-48f8-b853-85670c40c276"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-button"
+                        ],
+                        "height": 50,
+                        "hidden": true,
+                        "margin": "0 0 5 0",
+                        "showAnimation": [
+                            "{type: 'slideIn', direction: 'left'}"
+                        ],
+                        "ui": null,
+                        "width": 80,
+                        "iconAlign": "top",
+                        "iconCls": "settings",
+                        "text": "Settings"
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "66bc61f0-9791-41c2-a1f8-539235db3f92"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-button"
+                        ],
+                        "height": 50,
+                        "hidden": true,
+                        "margin": "0 0 5 0",
+                        "showAnimation": [
+                            "{type: 'slideIn', direction: 'right'}"
+                        ],
+                        "ui": null,
+                        "width": 80,
+                        "iconAlign": "top",
+                        "iconCls": "info",
+                        "text": "Help"
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "61472fac-cf00-4f0c-97ea-4f768b46cb23"
+                }
+            ]
+        }
+    ]
+}

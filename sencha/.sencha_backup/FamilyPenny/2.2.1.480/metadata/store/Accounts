@@ -1,0 +1,27 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[",
+            "    {",
+            "        \"name\": \"Peter\",",
+            "        \"accounts\": 5",
+            "    },",
+            "    {",
+            "        \"name\": \"Lea\",",
+            "        \"accounts\": 4",
+            "    }",
+            "]"
+        ],
+        "model": "Account",
+        "storeId": "accounts",
+        "designer|userClassName": "Accounts"
+    },
+    "designerId": "cecfb960-dc32-47e7-9cca-09c58e3a687c"
+}

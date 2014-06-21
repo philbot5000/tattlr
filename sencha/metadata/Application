@@ -1,0 +1,124 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "Start",
+            "SignUp",
+            "Introduction",
+            "TakePicture",
+            "Main",
+            "ViolationForm",
+            "CapturePicture"
+        ],
+        "requires": [
+            "Ext.DateExtras",
+            "Ext.MessageBox"
+        ],
+        "controllers": [
+            "Master",
+            "SignUp",
+            "Login",
+            "TakePicture"
+        ],
+        "name": "Tattlr"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "// Makes room for our iOS 7 toolbar...",
+                    "if(Ext.os.is.iOS) {",
+                    "",
+                    "    if(parseFloat(device.version) >= 7.0) {",
+                    "",
+                    "        Ext.Viewport.setMargin('20 0 0 0');",
+                    "        Ext.Viewport.setHeight(Ext.Viewport.getWindowHeight() - 20);",
+                    "        var body = Ext.DomQuery.select('body')[0];",
+                    "        var html = Ext.DomQuery.select('html')[0];",
+                    "        body.style.backgroundColor = '#1468A2';",
+                    "        html.style.backgroundColor = '#1468A2';",
+                    "    }",
+                    "}",
+                    "",
+                    "//Tattlr.app.tokenCheck();"
+                ]
+            },
+            "designerId": "afc56c96-7a39-4165-ad45-36f073d47c29"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "takePicture",
+                "implHandler": [
+                    "/****",
+                    "* Not currently in use....",
+                    "* Phonegap specific code",
+                    "* Camera Capture",
+                    "*",
+                    "***/",
+                    "var me = this;",
+                    "var settings = {",
+                    "    quality: 90,",
+                    "    sourceType : Camera.PictureSourceType.CAMERA,",
+                    "    encodingType: Camera.EncodingType.JPEG,",
+                    "    destinationType: Camera.DestinationType.DATA_URL,",
+                    "    saveToPhotoAlbum: false,",
+                    "    allowEdit : true,",
+                    "    targetWidth: 640,",
+                    "    targetHeight: 640,",
+                    "    correctOrientation: true",
+                    "};",
+                    "",
+                    "",
+                    "navigator.camera.getPicture(onSuccess, onFail, settings);",
+                    "",
+                    "function onSuccess(imageData) {",
+                    "",
+                    "    //console.log(imageData);",
+                    "    return 'data:image/jpeg;base64,'+imageData;",
+                    "",
+                    "}",
+                    "",
+                    "function onFail(message) {",
+                    "    //alert('Failed because: ' + message);",
+                    "    //dataview.show();",
+                    "}"
+                ]
+            },
+            "designerId": "c4e9f4c3-0900-4dd2-8bd3-eccdc82c0cb6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "tokenCheck",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "1f82b182-cbf1-4316-ae7d-bb6ad14df0fb"
+        }
+    ]
+}

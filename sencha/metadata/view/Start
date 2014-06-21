@@ -1,0 +1,174 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "hideAnimation": "fadeOut",
+        "itemId": "start",
+        "padding": 20,
+        "style": "background: #fff;",
+        "designer|userClassName": "Start",
+        "designer|userAlias": "start",
+        "layout": "vbox"
+    },
+    "designerId": "6e5fdf82-ac83-4fd8-b13d-5c0589fa2bd3",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<h1>tattlr</h1>",
+                "style": "font-size: 2em;"
+            },
+            "designerId": "2b5e5d9f-c02b-4265-bf6b-93ca217e7f80"
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "Log in:"
+            },
+            "designerId": "68571c2f-cddc-4dd7-bb0a-b15291e5943b"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "facebook",
+                "margin": "50 0 10 0",
+                "ui": "action",
+                "text": "Facebook"
+            },
+            "designerId": "fe32ac3f-e6d4-4c97-8864-b607b45d8cf8",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onFacebookTap",
+                        "implHandler": [
+                            "var main = Ext.getCmp('main');",
+                            "",
+                            "// /api/Account/ExternalLogin?provider=Facebook&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Ftattlr.azurewebsites.net%2F",
+                            "",
+                            "var ref = window.open('http://tattlr.azurewebsites.net/api/Account/ExternalLogin?provider=Facebook&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Ftattlr.azurewebsites.net%2F', '_blank', 'location=yes');",
+                            "",
+                            "ref.addEventListener('loadstop', function(event) {",
+                            "",
+                            "    var url = event.url;",
+                            "",
+                            "    if(url.indexOf('access_token=') !== -1) {",
+                            "        //var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character",
+                            "        //alert (hash);",
+                            "",
+                            "        var urlSplit = url.split('=');",
+                            "        var tokenSplit = urlSplit[1].split('&');",
+                            "",
+                            "        var token = tokenSplit[0];",
+                            "",
+                            "        localStorage.setItem('tattlrToken', token);",
+                            "",
+                            "        console.log(token);",
+                            "",
+                            "        var violationForm = Ext.create('Tattlr.view.ViolationForm');",
+                            "",
+                            "",
+                            "        main.setActiveItem(violationForm);",
+                            "",
+                            "        ref.close();",
+                            "",
+                            "    }",
+                            "",
+                            "",
+                            "});"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "c1501df7-3fc3-43b5-b372-6134adcaee88"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "twitter",
+                "ui": "confirm",
+                "text": "Twitter"
+            },
+            "designerId": "b0fd6480-965d-4b01-a1d5-2ae9b0ccfaae",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onTwitterTap",
+                        "implHandler": [
+                            "var main = Ext.getCmp('main');",
+                            "",
+                            "// /api/Account/ExternalLogin?provider=Facebook&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Ftattlr.azurewebsites.net%2F",
+                            "",
+                            "var ref = window.open('http://tattlr.azurewebsites.net//api/Account/ExternalLogin?provider=Twitter&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Ftattlr.azurewebsites.net%2F', '_blank', 'location=yes');",
+                            "",
+                            "ref.addEventListener('loadstop', function(event) {",
+                            "    ",
+                            "    var url = event.url;",
+                            "",
+                            "    if(url.indexOf('access_token=') !== -1) {",
+                            "            ",
+                            "        var urlSplit = url.split('=');",
+                            "        var tokenSplit = urlSplit[1].split('&');",
+                            "",
+                            "        var token = tokenSplit[0];",
+                            "",
+                            "        localStorage.setItem('tattlrToken', token);",
+                            "        ",
+                            "        console.log(token);",
+                            "",
+                            "        var violationForm = Ext.create('Tattlr.view.ViolationForm');",
+                            "        ",
+                            "",
+                            "        main.setActiveItem(violationForm);",
+                            "        ",
+                            "        ref.close();",
+                            "",
+                            "    }",
+                            "",
+                            "",
+                            "});"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "b35fd26a-ee84-47b2-ad58-dc192f70834f"
+                }
+            ]
+        }
+    ]
+}

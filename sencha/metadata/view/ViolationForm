@@ -1,0 +1,228 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "violationForm",
+        "designer|userClassName": "ViolationForm",
+        "layout": "vbox",
+        "enctype": null,
+        "standardSubmit": true
+    },
+    "designerId": "370aeb43-e0ea-431d-95d4-559d2ac9fc06",
+    "cn": [
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 201,
+                "hidden": true,
+                "itemId": "violationImage"
+            },
+            "designerId": "0693c568-caa7-42c1-84b9-659d74a1f442",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onViolationImageInitialize",
+                        "implHandler": [
+                            "var width = window.innerWidth;",
+                            "",
+                            "component.setWidth(width);",
+                            "component.setHeight(width);"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "fa607c2f-e509-48ec-b5b7-be9b74ffd963"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "violationSet",
+                "title": ""
+            },
+            "designerId": "ed228e5b-b9a5-4c96-b722-475eb9ddf4e5",
+            "cn": [
+                {
+                    "type": "Ext.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "violationFile",
+                        "label": "",
+                        "name": "File"
+                    },
+                    "designerId": "1b53669c-3352-47a1-bcff-7f9eb0d1ec30"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "violationDescription",
+                        "margin": "5 10 5 10",
+                        "label": null,
+                        "name": "Description",
+                        "placeHolder": "Please write a description of the violation..."
+                    },
+                    "designerId": "befeb0c0-07b8-41f1-b1d4-db4fc64a56ee"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "lat",
+                        "label": "Lat",
+                        "name": "Latitude"
+                    },
+                    "designerId": "cdad66d2-da73-488d-b37d-34e8cb68c978"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "lon",
+                        "label": "Lon",
+                        "name": "Longitude"
+                    },
+                    "designerId": "190eeb18-16e5-4625-b010-a5d1fffa6a02"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "submitViolation",
+                "margin": "5 10 5 10",
+                "ui": "confirm",
+                "text": "Submit"
+            },
+            "designerId": "7f37ec75-d8fa-4856-8bb0-04bcc6b5cf09",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onSubmitViolationTap",
+                        "implHandler": [
+                            "console.log('hey');",
+                            "",
+                            "var form = button.getParent();",
+                            "",
+                            "var token = localStorage.getItem('tattlrToken');",
+                            "",
+                            "form.submit({",
+                            "    url: 'http://tattlr.azurewebsites.net/api/report',",
+                            "    method: 'POST',",
+                            "    headers: {",
+                            "        Accept: 'application/json'",
+                            "    },",
+                            "    success: function(form, response) {",
+                            "        alert('form submitted successfully!');",
+                            "        console.log(response);",
+                            "    },",
+                            "    failure: function(form, response) {",
+                            "        console.log(response);",
+                            "    }",
+                            "});"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "99a819f5-57b7-4f0c-a539-dc38fc76833c"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViolationFormSubmit",
+                "implHandler": [
+                    "consolte.log(formpanel);"
+                ],
+                "name": "submit"
+            },
+            "designerId": "9a0b2fb4-6c8d-4fdb-9f95-13af4be80f10"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViolationFormInitialize",
+                "implHandler": [
+                    "Ext.device.Geolocation.getCurrentPosition({",
+                    "    timeout: 5000,",
+                    "    enableHighAccuracy: true,",
+                    "    maximumAge: 3000,",
+                    "    success: function(position) {",
+                    "        var lat = component.query('#lat')[0],",
+                    "            lon = component.query('#lon')[0];",
+                    "        ",
+                    "        lat.setValue(position.coords.latitude);",
+                    "        lon.setValue(position.coords.longitude);    ",
+                    "    },",
+                    "    failure: function(error) {",
+                    "        console.log(error);",
+                    "        alert('can\\'t find your location.');",
+                    "        ",
+                    "    }",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "designerId": "7f91ee11-833d-4090-b499-2b477d676ae5"
+        }
+    ]
+}

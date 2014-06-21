@@ -1,0 +1,85 @@
+{
+    "name": "FamilyPenny",
+    "settings": {},
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch23",
+    "topInstanceFileMap": {
+        "ef81f198-22e8-4497-a975-1a39b69f8bca": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "8ce4896c-807e-4c71-8695-d71f0ea082e5": {
+            "paths": [
+                "metadata/view/Master",
+                "app/view/override/Master.js",
+                "app/view/Master.js"
+            ],
+            "className": "Master"
+        },
+        "cecfb960-dc32-47e7-9cca-09c58e3a687c": {
+            "paths": [
+                "metadata/store/Accounts",
+                "app/store/override/Accounts.js",
+                "app/store/Accounts.js"
+            ],
+            "className": "Accounts"
+        },
+        "334db879-ec9a-4880-b425-82e656450782": {
+            "paths": [
+                "metadata/model/Account",
+                "app/model/override/Account.js",
+                "app/model/Account.js"
+            ],
+            "className": "Account"
+        },
+        "4cfa1c9e-4e7e-4bae-a130-6088f60869fc": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "abf23ca3-f10e-4d44-be75-af05a17ff996": {
+            "paths": [
+                "metadata/controller/MyController",
+                "app/controller/override/MyController.js",
+                "app/controller/MyController.js"
+            ],
+            "className": "MyController"
+        },
+        "0bcf733f-9ece-4e16-851a-d6643b91153e": {
+            "paths": [
+                "metadata/view/Accounts",
+                "app/view/override/Accounts.js",
+                "app/view/Accounts.js"
+            ],
+            "className": "Accounts"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "8ce4896c-807e-4c71-8695-d71f0ea082e5",
+            "0bcf733f-9ece-4e16-851a-d6643b91153e"
+        ],
+        "store": [
+            "cecfb960-dc32-47e7-9cca-09c58e3a687c"
+        ],
+        "controller": [
+            "abf23ca3-f10e-4d44-be75-af05a17ff996"
+        ],
+        "model": [
+            "334db879-ec9a-4880-b425-82e656450782"
+        ],
+        "resource": [
+            "ef81f198-22e8-4497-a975-1a39b69f8bca",
+            "4cfa1c9e-4e7e-4bae-a130-6088f60869fc"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

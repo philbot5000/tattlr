@@ -1,0 +1,84 @@
+.account {
+    display: block;
+    clear: both;
+    margin-top: 10px;
+    height: 80px;
+}
+
+.account-name {
+    font-size: 1.4em;
+}
+
+.user-image {
+    height: 75px;
+    width: 75px;
+    float: left;
+    -webkit-border-radius: 75px;
+	border: 2px solid #666;
+    margin-right: 10px;
+}
+
+.menu-bg {
+	background: #eee;
+}
+
+.main-inner {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s;
+}
+    
+.main {
+  -webkit-box-shadow: -3px 0px 8px 0px #ccc;
+  box-shadow:         -3px 0px 8px 0px #ccc;
+}
+    
+.blue {
+    background: #1E9DA2;
+}
+
+.light_blue {
+    background: #00F5EE;
+}
+
+.light_green {
+    background: #AEEB6F;
+}
+
+.green {
+    background: #65CE41;
+}
+
+.red {
+    background: #F25050;
+}
+
+.toolbar {
+    -webkit-border-radius: 0px 0px 0px 0px !important;
+}
+
+.menu-button {
+    font-size: 0.75em !important;
+    background: #fff !important;
+
+}
+.green-button {
+    border: 1px solid #65CE41 !important;
+    background: #fff !important;
+    color: #65CE41 !important;
+    font-size: 0.8em !important;
+}
+
+.light-green-button {
+    border: 1px solid #AEEB6F !important;
+    background: #fff !important;
+    color: #AEEB6F !important;
+    font-size: 0.8em !important;
+}
+
+.light-blue-button {
+    border: 1px solid #00F5EE !important;
+    background: #fff !important;
+    color: #00F5EE !important;
+    font-size: 0.8em !important;
+}

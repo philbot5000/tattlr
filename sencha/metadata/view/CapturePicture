@@ -1,0 +1,179 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": null,
+        "designer|userClassName": "CapturePicture",
+        "designer|userAlias": "capturepicture",
+        "layout": "vbox"
+    },
+    "designerId": "1a7e6262-902d-4dce-854f-73d05eae5ae6",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "this.file = this.element.down('input[type=file]');",
+                    "this.img = this.element.down('img');",
+                    "",
+                    "this.file.on('change', this.setPicture, this); //Step 2",
+                    "",
+                    "//FIX for webkit",
+                    "window.URL = window.URL || window.webkitURL; //Step 3"
+                ]
+            },
+            "designerId": "fdabdfbc-bab4-4b1d-a382-c85216927136"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setPicture",
+                "designer|params": [
+                    "event"
+                ],
+                "implHandler": [
+                    "var files = event.target.files;",
+                    "if (files.length === 1 && files[0].type.indexOf(\"image/\") === 0) {",
+                    "    this.img.setStyle('display', 'block');",
+                    "    this.img.set({",
+                    "        src: URL.createObjectURL(files[0]) //Step 4",
+                    "    });",
+                    "    this.setCaptured(true);",
+                    "}"
+                ]
+            },
+            "designerId": "0352722d-0bfa-4645-8ea1-82e481491a56"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "reset",
+                "implHandler": [
+                    "this.img.setStyle('display', 'none');",
+                    "this.img.set({",
+                    "    src: ''",
+                    "});",
+                    "this.setCaptured(false);"
+                ]
+            },
+            "designerId": "1c5c273c-73fd-48ad-8284-81ec2e158a90"
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<h1>Step 1:</h1>",
+                "padding": "10px",
+                "style": "font-size: 2em;"
+            },
+            "designerId": "13ef86a5-b82d-438e-879d-a4f8ffdcdbdb"
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<p>Take a picture of the violation.</p>",
+                "padding": "10px"
+            },
+            "designerId": "f9868960-f347-4b52-a562-d7c2bff2793f"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "center",
+                "container|pack": "center",
+                "html": null,
+                "layout": "vbox"
+            },
+            "designerId": "9c7c949d-42a6-46ad-92e9-a3c1ae59dfe1",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "picture-capture"
+                        ],
+                        "height": 150,
+                        "html": "<div class=\"icon\"><i class=\"icon-camera\"></i></div><img class=\"image-tns\" /><input type=\"file\" capture=\"camera\" accept=\"image/*\" />",
+                        "width": 150
+                    },
+                    "designerId": "c16a00b7-b650-45c6-8c41-8ca7912e2c91"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "violationDescription",
+                        "minWidth": 300,
+                        "label": null,
+                        "placeHolder": "Describe the violation"
+                    },
+                    "designerId": "03dd0c92-737d-4b26-a258-b9c2018eb92c"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 40,
+                        "itemId": "violationSubmit",
+                        "margin": "10 0 0 0",
+                        "ui": "confirm",
+                        "width": 300,
+                        "text": "Submit"
+                    },
+                    "designerId": "9f7df76b-6d3c-4ff7-afc7-5c04c79a2e12"
+                }
+            ]
+        }
+    ]
+}

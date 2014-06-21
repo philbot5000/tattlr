@@ -1,0 +1,76 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TakePicture"
+    },
+    "designerId": "342c0455-5b90-42a6-a979-e747b7f19003",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunchCameraButtonTap",
+                "implHandler": [
+                    "/****",
+                    "* Not currently in use....",
+                    "* Phonegap specific code",
+                    "* Camera Capture",
+                    "*",
+                    "***/",
+                    "var me = this;",
+                    "var settings = {",
+                    "    quality: 90,",
+                    "    sourceType : Camera.PictureSourceType.CAMERA,",
+                    "    encodingType: Camera.EncodingType.JPEG,",
+                    "    destinationType: Camera.DestinationType.DATA_URL,",
+                    "    saveToPhotoAlbum: false,",
+                    "    allowEdit : true,",
+                    "    targetWidth: 640,",
+                    "    targetHeight: 640,",
+                    "    correctOrientation: true",
+                    "};",
+                    "",
+                    "",
+                    "navigator.camera.getPicture(onSuccess, onFail, settings);",
+                    "",
+                    "function onSuccess(imageData) {",
+                    "",
+                    "    //console.log(imageData);",
+                    "    //return 'data:image/jpeg;base64,'+imageData;",
+                    "        ",
+                    "    var main = Ext.getCmp('main');",
+                    "    ",
+                    "    main.violation = {};",
+                    "    ",
+                    "    main.violation.image = imageData;",
+                    "    ",
+                    "    var violationForm = Ext.create('Tattlr.view.ViolationForm');",
+                    "    ",
+                    "    violationForm.query('#violationImage')[0].setSrc('data:image/jpeg;base64,'+imageData);",
+                    "    ",
+                    "    main.setActiveItem(violationForm);",
+                    "",
+                    "}",
+                    "",
+                    "function onFail(message) {",
+                    "    //alert('Failed because: ' + message);",
+                    "    //dataview.show();",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button#launchCameraButton"
+            },
+            "designerId": "359de341-6034-4038-aa3e-bd0fd0f5b970"
+        }
+    ]
+}

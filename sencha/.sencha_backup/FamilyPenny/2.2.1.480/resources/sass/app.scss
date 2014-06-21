@@ -1,0 +1,29 @@
+// The following two lines import the default Sencha Touch theme. If you are building
+// a new theme, remove them and the add your own CSS on top of the base CSS (which
+// is already included in your app.json file).
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+
+// Custom code goes here..
+
+// Examples of using the icon mixin:
+// @include icon('user');
+
+@include font-face(
+	'Pictos',
+	inline-font-files(
+	'icomoon.woff',
+	woff,
+	'icomoon.ttf',
+	truetype,
+	'icomoon.svg',
+	svg
+	)
+);
+
+@include icon('menu', '\f0c9', 'Pictos');
+@include icon('reports', '\e000', 'Pictos');
+@include icon('cash', '\e001', 'Pictos');
+@include icon('credit', '\e002', 'Pictos');
+@include icon('addUser', '\e003', 'Pictos');
+

@@ -1,0 +1,148 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SignUp"
+    },
+    "designerId": "23c10151-fb31-4b1c-8bc4-733a582b5c96",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSignUpSubmit",
+                "implHandler": [
+                    "var username = formpanel.getComponent('email'),",
+                    "    password = formpanel.getComponent('password'),",
+                    "    confirm = formpanel.getComponent('confirm');",
+                    "",
+                    "if(password.getValue() === confirm.getValue()) {",
+                    "    var user = new Parse.User();",
+                    "",
+                    "",
+                    "    user.set(\"username\", username);",
+                    "    user.set(\"password\", password);",
+                    "    user.set(\"email\", username);",
+                    "",
+                    "",
+                    "    user.signUp(null, {",
+                    "        success: function(user) {",
+                    "            // Hooray! Let them use the app now.",
+                    "            FP.app.redirectTo('accounts');",
+                    "        },",
+                    "        error: function(user, error) {",
+                    "            // Show the error message somewhere and let the user try again.",
+                    "",
+                    "            navigator.notification.alert(error.message, function() {}, error.code, 'OK');",
+                    "",
+                    "            //alert(\"Error: \" + error.code + \" \" + error.message);",
+                    "        }",
+                    "    });",
+                    "",
+                    "} else {",
+                    "",
+                    "    navigator.notification.alert('Passwords do not match.', function() {}, 'Missmatch', 'OK');",
+                    "}"
+                ],
+                "name": "submit",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "formpanel#signUp"
+            },
+            "designerId": "265888b2-58f6-40da-84a1-714b2dda9066"
+        },
+        {
+            "type": "Ext.app.Route",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "signup",
+                "fn": "showSignup",
+                "implHandler": [
+                    "var main = Ext.getCmp('main'),",
+                    "    signup = Ext.create('FP.view.SignUp');",
+                    "",
+                    "Ext.ComponentQuery.query('#toolbar')[0].hide();",
+                    "//toolbar.hide();",
+                    "main.setActiveItem(signup);"
+                ]
+            },
+            "designerId": "8fb4f39f-1b76-4018-953b-ca1fa1c3a448"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSubmitTap",
+                "implHandler": [
+                    "var username = Ext.ComponentQuery.query('#email')[0],",
+                    "    password = Ext.ComponentQuery.query('#password')[0],",
+                    "    confirm = Ext.ComponentQuery.query('#confirm')[0],",
+                    "    signup = Ext.ComponentQuery.query('#signUp')[0];",
+                    "",
+                    "signup.setMasked({xtype: 'loadmask', message: 'Submitting...'});",
+                    "",
+                    "if(password.getValue() === confirm.getValue()) {",
+                    "",
+                    "    var user = new Parse.User();",
+                    "",
+                    "    user.set(\"username\", username.getValue());",
+                    "    user.set(\"password\", password.getValue());",
+                    "    user.set(\"email\", username.getValue());",
+                    "",
+                    "",
+                    "    user.signUp(null, {",
+                    "        success: function(user) {",
+                    "            // Hooray! Let them use the app now.",
+                    "            FP.config.Runtime.setCurrentUserId(user.id);",
+                    "            signup.setMasked(false);",
+                    "            FP.app.redirectTo('intro');",
+                    "        },",
+                    "        error: function(user, error) {",
+                    "            // Show the error message somewhere and let the user try again.",
+                    "",
+                    "            signup.setMasked(false);",
+                    "",
+                    "            // Check if we're in Phonegap",
+                    "",
+                    "            if(typeof navigator.alert !== 'undefined') {",
+                    "                navigator.notification.alert(error.message, function() {}, error.code, 'OK');",
+                    "            } else {",
+                    "                alert(\"Error: \" + error.code + \" \" + error.message);",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "",
+                    "} else {",
+                    "    signup.setMasked(false);",
+                    "    // check if we are in Phonegap",
+                    "    if(typeof navigator.alert !== 'undefined') {",
+                    "",
+                    "        navigator.notification.alert('Passwords do not match.', function() {}, 'Missmatch', 'OK');",
+                    "    } else {",
+                    "        alert('Passwords do not match.');",
+                    "    }",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button#submit"
+            },
+            "designerId": "a16f1d10-8862-4877-ac82-631b78c05f3d"
+        }
+    ]
+}
