@@ -1,0 +1,7 @@
+<div class="page-header">
+  <h1>{{violation.TimeStamp | date: 'MM-dd-yyyy'}}</h1>
+</div>
+<img ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{violation.Latitude+','+violation.Longitude}}&zoom=15&scale=false&size=800x400&maptype=roadmap&sensor=false&key=AIzaSyCN5V2QdEmhy2tZ4lOiXhiiHgZEdOfRyk0&format=png&visual_refresh=true&markers=color:blue%7C{{violation.Latitude+','+violation.Longitude}}" width="100%" />
+<div class="lead">{{violation.Description}}</div>
+<img ng-src="{{violation.ImageUrl}}" width="200px" />
+<button type="button" class="btn btn-lg btn-warning" ng-click="deleteViolation(violation.Id)">Delete</button>

@@ -21,7 +21,6 @@ Ext.define('Tattlr.view.ViolationForm', {
         layout: {
             type: 'vbox'
         },
-        standardSubmit: true,
         items: [
             {
                 xtype: 'image',
@@ -101,17 +100,39 @@ Ext.define('Tattlr.view.ViolationForm', {
         console.log('hey');
 
         var form = button.getParent();
+        var values = form.getValues();
 
         var token = localStorage.getItem('tattlrToken');
 
-        form.submit({
+        /*form.submit({
+        url: 'http://tattlr.azurewebsites.net/api/report',
+        method: 'POST',
+        success: function(form, response) {
+        alert('form submitted successfully!');
+        console.log(response);
+        },
+        failure: function(form, response) {
+        console.log(response);
+        console.log(form);
+        }
+        });*/
+
+        Ext.Ajax.request({
             url: 'http://tattlr.azurewebsites.net/api/report',
             method: 'POST',
+            form: form,
             headers: {
-                Accept: 'application/json'
+                'Content-type': 'multipart/form-data; charset=UTF-8',
+                'Accept': 'application/json'
             },
+            //params: {
+            //    'File': values.File,
+            //    'Description': values.Description,
+            //    'Latitude': values.Latitude,
+            //    'Longitude': values.Longitude
+            //},
             success: function(form, response) {
-                alert('form submitted successfully!');
+                alert('worked');
                 console.log(response);
             },
             failure: function(form, response) {
@@ -143,7 +164,7 @@ Ext.define('Tattlr.view.ViolationForm', {
             }
         });
 
-
+        //var el = component.getElement();
     }
 
 });
